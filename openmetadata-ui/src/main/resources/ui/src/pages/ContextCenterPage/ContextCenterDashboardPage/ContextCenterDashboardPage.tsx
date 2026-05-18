@@ -16,6 +16,7 @@ import { AxiosError } from 'axios';
 import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import AlertBar from '../../../components/AlertBar/AlertBar';
 import { ArticleCardItem } from '../../../components/ContextCenter/ArticleCard/ArticleCard.interface';
 import ArticleListSection from '../../../components/ContextCenter/ArticleListSection/ArticleListSection.component';
 import ContextCenterHeader from '../../../components/ContextCenter/ContextCenterHeader/ContextCenterHeader.component';
@@ -27,7 +28,7 @@ import {
   OperationPermission,
   ResourceEntity,
 } from '../../../context/PermissionProvider/PermissionProvider.interface';
-import AlertBar from '../../../components/AlertBar/AlertBar';
+import { ContextFile } from '../../../generated/entity/data/contextFile';
 import { useAlertStore } from '../../../hooks/useAlertStore';
 import { useApplicationStore } from '../../../hooks/useApplicationStore';
 import {
@@ -35,7 +36,6 @@ import {
   PageType,
 } from '../../../interface/knowledge-center.interface';
 import { listContextFiles } from '../../../rest/assetAPI';
-import { ContextFile } from '../../../generated/entity/data/contextFile';
 import { getListKnowledgePages } from '../../../rest/knowledgeCenterAPI';
 import contextCenterClassBase from '../../../utils/ContextCenterClassBase';
 import {

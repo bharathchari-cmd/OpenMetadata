@@ -13,7 +13,10 @@
 
 import { File06 } from '@untitledui/icons';
 import { AxiosError } from 'axios';
-import { DocFile, DocFileType } from 'components/ContextCenter/DocumentsView/DocumentsView.interface';
+import {
+  DocFile,
+  DocFileType,
+} from 'components/ContextCenter/DocumentsView/DocumentsView.interface';
 import { FILE_TYPE_STYLES } from 'constants/ContextCenter.constants';
 import cryptoRandomString from 'crypto-random-string-with-promisify-polyfill';
 import { isNull, isUndefined } from 'lodash';
