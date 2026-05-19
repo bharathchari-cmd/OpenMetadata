@@ -80,7 +80,6 @@ const ArticleDetailHeader: FC<ArticleDetailHeaderProps> = ({
   onToggleRightPanel,
   onVoteChange,
   onFollowChange,
-  onToggleDelete,
   onSave,
   onSetThreadLink,
   fetchKnowledgePageHierarchy,
@@ -173,16 +172,12 @@ const ArticleDetailHeader: FC<ArticleDetailHeaderProps> = ({
     };
   }, [knowledgePage, t]);
 
-  const afterDeleteAction = async (isSoftDelete?: boolean) => {
+  const afterDeleteAction = async () => {
     updateKnowledgeCenterRecentViewed(
       recentlyViewed.filter((page) => page.id !== knowledgePage?.id)
     );
     await fetchKnowledgePageHierarchy?.(true);
-    if (isSoftDelete) {
-      onToggleDelete();
-    } else {
-      navigate(contextCenterClassBase.getArticlesListPath());
-    }
+    navigate(contextCenterClassBase.getArticlesListPath());
   };
 
   const handleVersionClick = () => {
@@ -563,7 +558,6 @@ const ArticleDetailHeader: FC<ArticleDetailHeaderProps> = ({
                 entityId={knowledgePage?.id}
                 entityName={knowledgePage?.displayName ?? t('label.untitled')}
                 entityType={EntityType.KNOWLEDGE_CENTER}
-                prepareType={false}
                 successMessage={t('server.entity-deleted-successfully', {
                   entity: entityType,
                 })}
