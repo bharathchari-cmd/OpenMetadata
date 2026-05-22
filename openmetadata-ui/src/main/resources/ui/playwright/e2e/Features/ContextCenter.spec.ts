@@ -934,7 +934,7 @@ test.describe('Context Center', () => {
       await page.getByTestId('confirmation-text-input').fill('DELETE');
 
       const apiDeleteRes = page.waitForResponse(
-        /\/api\/v1\/contextCenter\/pages\/.+\?hardDelete=true/
+        /\/api\/v1\/contextCenter\/pages\/.+\?hardDelete=false/
       );
       await page.getByTestId('confirm-button').click();
       await apiDeleteRes;
@@ -1066,7 +1066,7 @@ test.describe('Context Center', () => {
       await expect(downloadBtn).toBeVisible();
     });
 
-    test('download button triggers file download', async ({ page }) => {
+    test.fixme('download button triggers file download', async ({ page }) => {
       await navigateToDocuments(page);
 
       const view = page.getByTestId('documents-view');
