@@ -13,11 +13,6 @@
 
 import { File06 } from '@untitledui/icons';
 import { AxiosError } from 'axios';
-import {
-  DocFile,
-  DocFileType,
-} from 'components/ContextCenter/DocumentsView/DocumentsView.interface';
-import { FILE_TYPE_STYLES } from 'constants/ContextCenter.constants';
 import cryptoRandomString from 'crypto-random-string-with-promisify-polyfill';
 import { isNull, isUndefined } from 'lodash';
 import { FC } from 'react';
@@ -26,8 +21,13 @@ import { ReactComponent as ImageIcon } from '../assets/svg/ic-image.svg';
 import { ReactComponent as PDFIcon } from '../assets/svg/ic-pdf.svg';
 import { ReactComponent as XLSIcon } from '../assets/svg/ic-xls.svg';
 import { ArticleCardItem } from '../components/ContextCenter/ArticleCard/ArticleCard.interface';
+import {
+  DocFile,
+  DocFileType,
+} from '../components/ContextCenter/DocumentsView/DocumentsView.interface';
 import { UploadedDocumentItem } from '../components/ContextCenter/UploadedDocumentCard/UploadedDocumentCard.interface';
 import { CREATE_PAGE_HASH } from '../constants/constants';
+import { FILE_TYPE_STYLES } from '../constants/ContextCenter.constants';
 import { EntityType } from '../enums/entity.enum';
 import { Asset, AssetType } from '../generated/attachments/asset';
 import { ContextFile } from '../generated/entity/data/contextFile';
