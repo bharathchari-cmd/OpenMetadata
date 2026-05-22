@@ -16,9 +16,9 @@
 
 # OpenMetadata
 
-## The Open Semantic Context Platform for Data and AI
+## The Open Context Layer for Humans, AI Assistants, and Agents
 
-OpenMetadata is the open platform for building trusted data context and business semantics for humans, AI assistants, and agents.
+OpenMetadata is the open context layer that unifies  technical context, business semantics, and organizational memory into one context graph — so AI agents and humans reason from the same trusted foundation for humans, AI assistants, and agents.
 
 OpenMetadata connects technical metadata, data quality signals, data lineage, column-level lineage, ownership, usage, policies, conversations, glossaries, classifications, metrics, domains, and data products into a unified metadata knowledge graph. With 120+ connectors, open metadata standards, semantic search, APIs, SDKs, and an MCP server, OpenMetadata gives every user and AI system the governed context it needs to discover, understand, trust, and use data.
 
@@ -66,12 +66,13 @@ Connecting an AI assistant directly to a database, warehouse, dashboard, or pipe
 
 OpenMetadata gives AI systems the context and semantics they need to safely discover, understand, govern, and use enterprise data.
 
-OpenMetadata does this by combining four capabilities:
+OpenMetadata does this by combining multiple capabilities:
 
 1. **Context** — technical, operational, trust, and lineage metadata from the data ecosystem.
 2. **Semantics** — business meaning through glossaries, metrics, classifications, domains, policies, and ontologies.
-3. **Knowledge Graph** — relationships connecting assets, columns, people, teams, policies, lineage, quality, and business concepts.
-4. **Automation** — MCP, Semantic Search, APIs, SDKs, events, and workflows that let AI assistants and agents act on governed metadata.
+3. **Memory** - Persistent context that compounds over time
+4. **Knowledge Graph** — relationships connecting assets, columns, people, teams, policies, lineage, quality, and business concepts.
+5. **Automation** — MCP, Semantic Search, APIs, SDKs, events, and workflows that let AI assistants and agents act on governed metadata.
 
 With OpenMetadata, AI can answer questions such as:
 
@@ -265,6 +266,11 @@ Semantics answers questions like:
 - Which glossary terms apply?
 - Which domain owns this data product?
 
+---
+
+## Memory: Persistent Context That Compounds Over Time
+
+Without memory, every AI correction and human clarification evaporates. The next person or agent asks the same question and gets the same wrong answer. OpenMetadata captures memory as a first-class object, tagged to the data assets it describes. Corrections, definitions, and decisions become permanent context the next user or AI agent inherits automatically. Memory storage and MCP read/write tooling ship in open source. Any MCP-compatible assistant or agent can ground its reasoning in your organization's accumulated knowledge.
 ---
 
 ## Knowledge Graphs and Ontologies
